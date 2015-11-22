@@ -2,7 +2,11 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+# makeCacheMatrix creates a list containing a function to
+# 1. set the value of the matrix
+# 2. get the value of the matrix
+# 3. set the value of inverse of the matrix
+# 4. get the value of inverse of the matrix
 makeCacheMatrix <- function(x = matrix()) {
 
   inv <- NULL
@@ -31,3 +35,17 @@ cacheSolve <- function(x, ...) {
   x$setinverse(inv)
   inv
   }
+#makeCacheMatrix
+#results
+#> x = rbind(c(2, -1/7), c(-1/7, 2))
+#> m = makeCacheMatrix(x)
+#> m$get()
+#[,1]       [,2]
+#[1,]  2.0000000 -0.1428571
+#[2,] -0.1428571  2.0000000
+
+#cacheSolve(m)
+cacheSolve(m)
+#[,1]       [,2]
+#[1,]  2.0000000 -0.1428571
+#[2,] -0.1428571  2.0000000
